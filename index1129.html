@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="html">
+<!--1-->
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href=/favicon.ico type=image/x-icon>
+    <meta property="og:type"content="image"/>
+    <meta property="og:image"content="https://www.fxbtg-chinese.com/Apps/Tpl/default/Public/images/logo1-1.jpg"/>
+    <meta name="baidu-site-verification" content="QFlFIftpVC" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <link type="text/css" href="__PUBLIC__/css/reset.css" rel="stylesheet" />
+    <link type="text/css" href="__PUBLIC__/fonts/iconfont.css" rel="stylesheet" />
+    <link type="text/css" href="__PUBLIC__/css/slick.css" rel="stylesheet" />
+    <link type="text/css" href="__PUBLIC__/css/css.css" rel="stylesheet" />
+    <!--<script src="__PUBLIC__/js/jquery-1.8.3.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="__PUBLIC__/js/slick.js"></script>
+    <script src="__PUBLIC__/js/js.js"></script>
+    <title>{$title}</title>
+    <meta name="keywords" content="{$keywords}">
+    <meta name="description" content="{$description}">
+    <meta name="baidu-site-verification" content="c4RrGqI1mT" />
+    <meta name="sogou_site_verification" content="deylKYM1C2"/>
+    <meta name="360-site-verification" content="5eb70b6ab587a18c558512f05a66f463" />
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?1af6db160118a52211ba89d4935e2a3d";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="activity_body">
+<div class="header">
+    <if condition="$topbanner[0]['id'] eq null"><else/>
+        <volist name="topbanner" id="vo">
+            <div class="activity_box"><a href="{$vo.url}"><img src="__ROOT__/Uploads{$vo.img}"></a></div>
+        </volist>
+    </if>
+
+    <div class="header_top">
+        <div class="wp clearfix">
+            <!--<a href="#" class="c c4"><em><img src="__PUBLIC__/images/cn.png"></em>China<i class="iconfont icon-jiantou"></i></a>-->
+            <a href="https://manager.fxbtg-chinese.com " target=" _blank" class="c c3">登录</a>
+            <a href="https://register.fxbtg-chinese.com/custom/iUBJR3YZf2uy" class="c c2">开立真实账户</a>
+            <span class="c c1"><i class="iconfont icon-erji"></i>中国（南部）：10 800 260 0737 | 中国（北部）：10 800 600 0153 | 海外（中国以外国家）：+603-2603 2233</span>
+        </div>
+    </div>
+
+    <div class="header_bottom">
+        <div class="wp clearfix">
+            <a href="/" class="logo"><img src="__PUBLIC__/images/logo.png" alt="FXBTG金融集团"/></a>
+            <div class="menu">
+                <ul>
+                    <li class="curr">
+                        <div class="h3"><a href="/">首页<i><span></span></i></a></div>
+                    </li>
+                    <li><div class="h3"><a href="javascript:;">交易<i><span></span></i></a><em></em></div>
+                        <div class="box">
+                            <a href="">--产品--</a>
+                            <a href="">黄金</a>
+                            <a href="">原油</a>
+                            <a href="">指数</a>
+                            <a href="">期货</a>
+                            <a href="">股票</a>
+                            <a href="">数字货币</a>
+                            <a href="">--产品--</a>
+                            <a href="">黄金</a>
+                            <a href="">原油</a>
+                            <a href="">指数</a>
+                            <a href="">期货</a>
+                            <a href="">股票</a>
+                            <a href="">数字货币</a>
+                        </div>
+                    </li>
+                    <li><div class="h3"><a href="javascript:;">法务<i><span></span></i></a><em></em></div>
+                        <div class="box"><a href="{:U('Service/center')}">学习中心</a><a href="{:U('Service/Qa')}">常见问题</a></div>
+                    </li>
+                    <li>
+                        <div class="h3"><a href="javascript:;">关于<i><span></span></i></a><em></em></div>
+                        <div class="box"><a href="{:U('About/index')}">认识我们</a><a href="{:U('About/bangs')}">全球办公室</a><a href="{:U('About/jianguan')}">监管与资金安全</a><a href="{:U('About/youshi')}">我们的优势</a><a href="{:U('About/rongyu')}">所获荣誉</a><a href="{:U('About/zeren')}">社会责任</a></div>
+                    </li>
+                    <li><div class="h3"><a href="{:U('Banffs/index')}">联系<i><span></span></i></a><em></em></div>
+                        <div class="box">
+                            <!--
+                            <a href="{:U('Banff/brand')}">媒体品牌展会</a>
+                            <a href="{:U('Banff/banffdekaron')}">新西兰极限探险之旅</a>
+                           <a href="{:U('Banff/iphone')}">你交易 我送礼 iPhone8免费拿</a>-->
+                            <!--<a href="{:U('Banff/mxcp')}">明星产品</a>
+                            <a href="{:U('Banff/fanljjg')}">返利节节高</a>-->
+                            <volist name="huodong_list" id="vo">
+                                <a href="{:U('Banffs/activity',array('id'=>$vo['id']))}">{$vo.catname}</a>
+                            </volist>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!--<a href="https://www1.fxbtg.net/" class="bank_fxbtg" target="_blank">原官网</a>-->
+            <div class="top_search">
+                <form action="{:U('Index/find')}" method="post">
+                    <i class="iconfont icon-fangda"></i>
+                    <div class="box"><div class="i"></div><div class="pd">
+                        <input type="text" class="ipt_t1" name="title">
+                        <input type="submit" class="ipt_b1 iconfont" value="&#xe631;"></div></div>
+                </form>
+            </div>
+            <a href="javascript:;" class="menu-link">
+                <span></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="menu_box">
+    <div class="wp clearfix">
+        <ul>
+            <li></li>
+            <li>
+                <div class="pd clearfix">
+                    <div class="menu_box_fl"><a href="https://register.fxbtg-chinese.com/custom/jiaQni">开立真实账户</a></div>
+                    <div class="menu_box_fr">
+                        <div class="img"><img src="__PUBLIC__/images/top_about.jpg" alt="FXBTG金融集团简介"></div>
+                        <div class="text"><a href="{:U('About/index')}">认识我们</a><a href="{:U('About/bangs')}">全球办公室</a><a href="{:U('About/jianguan')}">监管与资金安全</a><a href="{:U('About/youshi')}">我们的优势</a><a href="{:U('About/rongyu')}">所获荣誉</a><a href="{:U('About/zeren')}">社会责任</a></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="pd clearfix">
+                    <div class="menu_box_fl"><a href="https://register.fxbtg-chinese.com/custom/jiaQni">开立真实账户</a></div>
+                    <div class="menu_box_fr">
+                        <div class="img"><img src="__PUBLIC__/images/top_trading.jpg" alt="交易平台_FXBTG金融集团"></div>
+                        <div class="text"><a href="{:U('Trading/index')}">交易平台</a><a href="{:U('Trading/chanpin')}">交易产品</a><a href="{:U('Trading/jiaoytj')}">交易条件</a><a href="{:U('Trading/leixing')}">账户类型</a><a href="{:U('Trading/xiane')}">银行存款限额
+                        </a><a href="{:U('Trading/fangsi')}">银行存款方式</a></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="pd clearfix">
+                    <div class="menu_box_fl"><a href="https://register.fxbtg-chinese.com/custom/jiaQni">开立真实账户</a></div>
+                    <div class="menu_box_fr">
+                        <div class="img"><img src="__PUBLIC__/images/top_service.jpg"  alt="服务与支持_FXBTG金融集团"></div>
+                        <div class="text"><a href="{:U('Service/center')}">学习中心</a><a href="{:U('Service/Qa')}">常见问题</a><a href="{:U('Service/index')}">关注我们</a></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="pd clearfix">
+                    <div class="menu_box_fl"><a href="https://register.fxbtg-chinese.com/custom/jiaQni">开立真实账户</a></div>
+                    <div class="menu_box_fr">
+                        <div class="img"><img src="__PUBLIC__/images/top_news.jpg" alt="新闻_FXBTG金融集团"/></div>
+                        <div class="text"><a href="{:U('News/index')}">公司新闻</a><a href="{:U('News/fenxi')}">每日分析</a><a href="https://register.fxbtg-chinese.com/custom/jiaQni">行业动态</a><a href="{:U('News/jihui')}">工作机会</a></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="pd clearfix">
+                    <div class="menu_box_fl"><a href="https://register.fxbtg-chinese.com/custom/jiaQni">开立真实账户</a></div>
+                    <div class="menu_box_fr">
+                        <div class="img"><img src="__PUBLIC__/images/top_banff.jpg" alt="山地电影节_FXBTG金融集团"></div>
+                        <div class="text">
+                            <!--<a href="{:U('Banff/brand')}">媒体品牌展会</a>
+                            <a href="{:U('Banff/banffdekaron')}">新西兰极限探险之旅</a>
+                            <a href="{:U('Banff/iphone')}">你交易 我送礼 iPhone8免费拿</a>-->
+                            <!--<a href="{:U('Banff/mxcp')}">明星产品</a>
+                           <a href="{:U('Banff/fanljjg')}">返利节节高</a>-->
+                            <volist name="huodong_list" id="vo">
+                                <a href="{:U('Banffs/activity',array('id'=>$vo['id']))}">{$vo.catname}</a>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="ibanner">
+    <div class="single-item">
+        <div class="slick-slide"><a style="cursor:default" href="/news_fenxi.html"><img src="https://www.fxbtg-chinese.com/Uploads//2018/04/12/5acef111b0952.jpg" alt="每日分析"></a></div>
+    </div>
+    <!--<div class="single-item">
+    <volist name="blist" id="vo">
+    <div class="slick-slide"><a href="{$vo.url}"><img src="__ROOT__/Uploads/{$vo.img}" alt="{$vo.title}"></a></div>
+    </volist>
+    </div>
+	-->
+</div>
+
+
+<!--<div class="icon_partner"><a href="{:U('banff/index')}"><img src="__PUBLIC__/images/icon_partner.jpg" alt="班夫山地电影节_FXBTG金融集团"></a></div>-->
+
+
+
+</div>
+<include file="Public:footer" />
+<style>
+    .alink{background: #fff; padding:15px 0;}
+    .alink .p1{ font-size:14px; margin-bottom:5px;}
+    .alink .p1 strong{ margin-right:10px;}
+    .alink .p1 a{}
+    .alink .p1 span{ margin:0 10px;}
+    .alink .p2{}
+</style>
+
+<div class="sub_nav">
+    <ul>
+        <li><a href="https://register.fxbtg-chinese.com/custom/jiaQni"><i class="iconfont icon-diannao"></i><span>开户账户</span></a></li>
+        <li><a href="https://manager.fxbtg-chinese.com"><i class="iconfont icon-dianji"></i><span>登录平台</span></a></li>
+    </ul>
+</div>
+
+<div class="qq_bg" onClick="qq_hide()"></div>
+<div class="qq_box">
+    <div class="qq_box_tit">
+        <div class="h3">请确认</div>
+        <div class="p">确认打开QQ与营销QQ4008882660对话？</div>
+    </div>
+    <div class="qq_box_con clearfix">
+        <div class="p1">客服服务时间：周一至周五 9:00-24:00</div>
+        <a href="javascript:;" class="a2" onClick="qq_hide()">取 消</a><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzkzODA3NjQwOV80NzM3MjFfNDAwODg4MjY2MF8yXw" target="_blank" class="a1" onClick="qq_hide()">确 定</a>
+    </div>
+</div>
+<!--<div class="mascot"><img src="__PUBLIC__/images/mascot.gif" alt="FXBTG金融集团"></div>-->
+
+<div class="v_box_bg"></div>
+<div class="v_box">
+    <a class="shut">×</a>
+    <div class="h3">标题</div>
+    <div class="video"></div>
+</div>
+<script type="text/javascript">
+    function renderTable(arr)
+    {
+        var $tb = $("#symbolsList");
+        for(var i = 0;i < arr.length;i++)
+        {
+            var id = "tr_" + arr[i].symbol;
+            var $tr = $('#'+id);
+            if($tr.length > 0)
+            {
+                var tds = $tr.children("td");
+                if(arr[i].direction)
+                {
+                    $(tds[1]).text(arr[i].ask).css({"background-color":"#e8775d","font-weight":"bold","color":"#fff"});
+                    $(tds[2]).text(arr[i].bid).css({"background-color":"#e8775d","font-weight":"bold","color":"#fff"});
+                    $(tds[3]).text(arr[i].spread).css({"background-color":"#e8775d","font-weight":"bold","color":"#fff"});
+                }
+                else{
+                    $(tds[1]).text(arr[i].ask).css({"background-color":"#2d59bd","font-weight":"bold","color":"#fff"});
+                    $(tds[2]).text(arr[i].bid).css({"background-color":"#2d59bd","font-weight":"bold","color":"#fff"});
+                    $(tds[3]).text(arr[i].spread).css({"background-color":"#2d59bd","font-weight":"bold","color":"#fff"});
+                }
+            }
+            else
+            {
+                $tb.children("tbody").append('<tr id="'+id+'"><td>'+arr[i].symbol+'</td><td >'+arr[i].ask+'</td><td>'+arr[i].bid+'</td><td>'+arr[i].spread+'</td></tr>');
+            }
+        }
+    }
+    if(typeof(WebSocket) == "undefined") {
+    }
+    $(function(){
+        //setInterval(requestQuote,1000);
+    });
+
+    function requestQuote()
+    {
+        $.ajax({
+            url: "https://quotepush.fxbtg-chinese.com/quote.ashx",
+            type:'GET',
+            async:true,
+            dataType: "jsonp",
+            jsonp: "jsonpcallback", //传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "success_jsonpCallback2", //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            success: function (json){
+                renderTable(json.Data);
+            }
+        });
+    }
+    function success_jsonpCallback2(data)
+    {
+    }
+    function jsonpcallback(data)
+    {
+    }
+</script>
+<!--
+<script type="text/javascript">
+(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));
+var bdcs = document.createElement('script');bdcs.type = 'text/javascript';
+bdcs.async = true;bdcs.src = 'https://znsv.baidu.com/customer_search/api/js?sid=7387335732565910318' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();
+</script>
+-->
+
+
+<div class="msg_bg"></div>
+<div class="msg_box">
+    <div class="pd">
+        <div class="p">FXBTG暂不接受香港、美國、澳洲、日本，以及未在當地設立辦公室並經營的地區的客戶，很抱歉您將無法繼續訪問FXBTG的網站。<br>FXBTG do not accept clients from Hong Kong, United States, Australia and Japan, and regions where offices are not established and operating. You will not be able to continue to visit the website.</div>
+    </div>
+</div>
+
+<style>
+    .msg_bg{ display:none; position:fixed;_position:absolute; left:0px; top:0px; bottom:0px; right:0px; width:100%; background:rgba(0,0,0,0.5); z-index:99991;}
+    .msg_box{ display:none; position:fixed;_position:absolute; left:50%; top:50%; width:600px; margin:-100px 0 0 -400px; background:#fff; z-index:99992; text-align:center; box-shadow:0 0 20px rgba(0,0,0,0.8); border-radius:10px;}
+    .msg_box .pd{ padding:40px;}
+    .msg_box .h3{ font-size:18px;}
+    .msg_box .m{ padding:15px 0;}
+    .msg_box .m a{ width:100px; height:40px; text-align:center; line-height:40px; background:#eb6b00; color:#fff; display:block; margin:0 auto; border-radius:5px;}
+    .msg_box .p{ font-size:14px;}
+</style>
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+    window.__lc = window.__lc || {};
+    window.__lc.license = 10364152;
+    (function() {
+        var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+        lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+    })();
+</script>
+<noscript>
+    <a href="https://www.livechatinc.com/chat-with/10364152/">Chat with us</a>,
+    powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->
+</body>
+</html>
+<script>
+    $(function(){
+        $('.activity_body').css({'padding-top':$('.header').height()});
+        $('.menu_box').css({'top':$('.header').height()});
+        $(window).resize(function(){
+            $('.activity_body').css({'padding-top':$('.header').height()})
+            $('.menu_box').css({'top':$('.header').height()});
+        })
+    })
+    var timer = setTimeout(function(){
+        $('body').removeClass('activity_body').removeAttr('style');
+        $('.menu_box').removeAttr('style');
+    },8000);
+</script>
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script>
+    $(document).ready(function(){
+        setTimeout(function(){
+            try{
+                var ip=returnCitySN.cip;
+                $.getScript('https://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip='+ip,function(result){
+                    if(remote_ip_info.province == '香港'){
+                        $('.msg_box,.msg_bg').show();
+                    }else{
+                        $('.msg_box,.msg_bg').hide();
+                    }
+                });
+            }catch(e){}
+        }, 1000);
+    })
+</script>
